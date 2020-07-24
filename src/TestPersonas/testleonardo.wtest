@@ -1,0 +1,24 @@
+import pacientes.*
+import aparatos.*
+
+describe "test leonardo" {
+	const leonardo = new Paciente()
+	
+	const magneto = new Magneto()
+	const bicicleta = new Bicicleta()
+	const minitramp = new Minitramp()
+	
+	fixture{
+		Leonardo.edad(40)
+		Leonardo.nivelDeDolor (10)
+		Leonardo.nivelDeFortaleza(20)
+	}
+	
+	test "leonardo primera parte"{
+		assert.that(leonardo.puedeUsarAparato())
+		leonardo.puedeUsarlo(magneto)
+		assert.equals(9,leonardo.nivelDeDolor())
+		
+		}
+		
+}
